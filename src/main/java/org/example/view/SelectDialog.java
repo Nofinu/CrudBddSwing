@@ -41,7 +41,6 @@ public class SelectDialog extends JDialog{
         this.add(table,BorderLayout.NORTH);
 
         List<Contact> listContacts= contactDao.findAll();
-        System.out.println(listContacts);
         listContacts.forEach(c ->{
             dtm.addRow(new Object[]{c.getId(),c.getName(),c.getNumber()});
         });
